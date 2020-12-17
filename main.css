@@ -1,0 +1,3117 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  box-sizing: border-box;
+}
+
+
+
+:root{
+  --beige:#F2EBE9;
+  --dark:#707070;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  overflow-x: hidden;
+  overscroll-behavior-x: contain;
+  max-width: 100vw;
+}
+
+#menu {
+  position: fixed;
+  height: 100px;
+  width: 100vw;
+  top: 0;
+  z-index: 10;
+  background: white;
+}
+
+.menu-links {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  display: flex;
+}
+
+
+.menu-links a {
+  width: 33.3%;
+  position: relative;
+  transition: .2s;
+}
+
+.menu-links li{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  list-style: none;
+  color: var(--dark);
+  font-size: 20px;
+  transition: .2s;
+}
+
+.menu-links a:hover {
+  background: var(--beige)
+}
+
+.menu-links a:hover li {
+  color: black;
+}
+
+.menu-logo img{
+  max-height: 80%;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/*vh= viewport height
+  vw= viewport width*/
+
+#hero{
+  height: 100vh;
+  position: relative;
+}
+
+#hero-text{
+  width: 50vw;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 100px;
+}
+
+#hero-text hr{
+  border:.5px solid var(--dark);
+  margin-top: 20px;
+}
+
+#hero-text h1{
+  font-family: 'Playfair Display', serif;
+  font-size: 100px;
+  line-height: 110px;
+  font-weight: normal;
+}
+
+#hero-text h2{
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--dark);
+  margin-top: 10px;
+}
+
+.hero-image{
+  position: absolute;
+  right: 50px;
+  bottom: 0;
+  max-height: calc(100vh - 100px);
+
+}
+
+
+#about{
+  height: 70vh;
+  background: var(--beige);
+  margin-top: 100px;
+  position: relative;
+}
+
+.about-image{
+  max-height: 80%;
+  margin-left: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  z-index: 5;
+
+}
+
+.about-flower{
+  height: 500px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+.about-text{
+background: white;
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+left: 50%;
+max-width: 40%;
+padding: 30px;
+height: 80%;
+box-sizing: border-box;
+}
+
+.center-text{
+  transform: translateY(-50%);
+  position: relative;
+  top: 50%;
+}
+
+
+
+h4{
+  font-size: 60px;
+  max-height: 80px;
+}
+
+#about hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+a.kontaktknap{
+  padding: 5px 20px;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  background: black;
+  font-size: 15px;
+  bottom: 10px;
+  left: 66%;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+/*Ny sektion starter her*/
+
+
+#portfolio{
+  height: 150vh;
+  background: var(--beige);
+  margin-top: 200px;
+  position: relative;
+  overflow-x: hidden;
+
+
+}
+
+#overskrift h3{
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  top: 5%;
+  font-weight: bold;
+  z-index: 2;
+  border-bottom: 0.5px var(--dark) solid;
+}
+
+
+a.gallery1{
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  position: absolute;
+  top: 30%;
+  left: 17%;
+  background-color: var(--beige);
+  opacity: 50%;
+  z-index: 2;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a.gallery2{
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  position: absolute;
+  top: 30%;
+  right: 17%;
+  background-color: var(--beige);
+  opacity: 50%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+
+}
+
+a.gallery3 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  position: absolute;
+  bottom: 25%;
+  left: 17%;
+  background-color: var(--beige);
+  opacity: 50%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a.gallery4 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+  font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  position: absolute;
+  bottom: 25%;
+  right: 17%;
+  background-color: var(--beige);
+  opacity: 50%;
+  text-align: center;
+  z-index: 2;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+
+.portfolio-image1{
+  height: 300px;
+  top: 20%;
+  left: 7%;
+  position: absolute;
+  object-fit: cover;
+  object-position: center center;
+  width: 490px;
+  z-index: 1;
+
+}
+
+.portfolio-image2{
+  height: 300px;
+  top: 20%;
+  right: 7%;
+  position: absolute;
+  width: 490px;
+  object-position: center center;
+
+}
+
+.portfolio-image3{
+  height: 300px;
+  bottom: 15%;
+  left: 7%;
+  position: absolute;
+  width: 490px;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.portfolio-image4{
+  height: 300px;
+  bottom: 15%;
+  right: 7%;
+  position: absolute;
+  width: 490px;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.cirkel1{
+  height: 585px;
+  left: -100px;
+  position: absolute;
+  z-index: 0;
+}
+
+.cirkel2{
+  height: 400px;
+  right: -100px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 0;
+
+}
+
+/*Ny sektion starter her*/
+
+
+#contact{
+  height: 80vh;
+  background: var(--beige);
+  margin-top: 200px;
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+#contact .half-col {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.half-col input{
+  width: calc(100% - 50px);
+  height: 50px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.half-col textarea{
+  width: calc(100% - 50px);
+  border: none;
+  float: right;
+  height: 280px;
+
+}
+
+.form1 {
+  transform: translate(-50%,-50%);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: calc(100% - 200px);
+}
+
+#contact h3{
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+  left: 35%;
+  top: 5%;
+  font-weight: bold;
+  z-index: 2;
+  border-bottom: 0.5px var(--dark) solid;
+}
+
+form p{
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+.contact-message{
+  margin-left: 50px;
+}
+
+.sendknap2{
+  padding: 5px 20px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  background: black;
+  font-size: 15px;
+  margin-top: 10px;
+  left: 4.5%;
+  font-family: 'Playfair Display', serif;
+}
+
+
+/*Ny sektion*/
+
+footer{
+  height: 20vh;
+  background: #F4F4F4;
+  margin-top: 200px;
+  position: absolute;
+  padding: 0 100px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.some-links{
+  width: 10%;
+  height: 25px;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  transform: translateY(-50%);
+  float: left;
+}
+
+.some-links img{
+  height: 25px;
+}
+
+.footer-logo {
+  height: 50px;
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-logo img {
+  height: 100%;
+}
+
+
+/*Ny side starter her*/
+
+#me{
+  height: 230vh;
+  background: var(--beige);
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+
+#om-mig{
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  top: 7%;
+  font-weight: bold;
+  z-index: 2;
+  border-bottom: 0.5px var(--dark) solid;
+}
+
+.me-cirkel{
+  height: 600px;
+  left: -200px;
+  position: absolute;
+  z-index: 0;
+}
+
+.me-blomst{
+  height: 400px;
+  right: 0px;
+  position: absolute;
+  bottom: 500px;
+  z-index: 2;
+}
+
+.me-billede{
+  height: 500px;
+  left: 50px;
+  top: 3%;
+  transform: translateY(50%);
+  position: absolute;
+  z-index: 5;
+}
+
+.me-box{
+  background: white;
+  position: absolute;
+  top: 33%;
+  transform: translateY(-50%);
+  left: 40%;
+  width: 56%;
+  padding: 30px;
+  height: 35%;
+  box-sizing: border-box;
+  margin-right: 100px;
+}
+
+.text{
+  transform: translateY(-50%);
+  position: relative;
+  top: 25%;
+}
+
+.text p{
+  font-size: 30px;
+  position: relative;
+  transform: translateY(30%);
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.pictures1{
+  height: 450px;
+  left: 50px;
+  bottom: 12%;
+  position: absolute;
+  z-index: 5;
+}
+
+.pictures2{
+  height: 450px;
+  left: 37.5%;
+  bottom: 12%;
+  position: absolute;
+  z-index: 5;
+
+}
+
+.pictures3{
+  height: 450px;
+  right: 50px;
+  bottom: 12%;
+  position: absolute;
+  z-index: 5;
+}
+
+
+/*Ny side starter her*/
+
+#contactpage{
+  height: 130vh;
+  background: var(--beige);
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+#kontakt{
+  font-size: 70px;
+  position: absolute;
+  text-align: center;
+  left: 40%;
+  top: 12%;
+  font-weight: bold;
+  z-index: 2;
+  border-bottom: 0.5px var(--dark) solid;
+}
+
+.contactform h3{
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  position: relative;
+
+}
+
+.contactform hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 21%;
+  margin-bottom: 10px;
+}
+
+#contactpage .half-col {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.half-col input{
+  width: calc(100% - 50px);
+  height: 50px;
+  margin-bottom: 30px;
+  border: none;
+}
+
+.half-col textarea{
+  width: calc(100% - 50px);
+  border: none;
+  float: right;
+  height: 280px;
+
+}
+
+.form2 {
+  transform: translate(-50%,-90%);
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  width: calc(100% - 200px);
+}
+
+form p{
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+  text-align: left;
+}
+
+.contact-message{
+  margin-left: 50px;
+}
+
+.sendknap2{
+  padding: 5px 20px;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  background: black;
+  font-size: 15px;
+  margin-top: 10px;
+  left: 4.5%;
+  font-family: 'Playfair Display', serif;
+}
+
+.findme h3{
+  font-size: 40px;
+  font-family: 'Cormorant Garamond', serif;
+  position: absolute;
+  bottom: 20%;
+}
+
+.findme hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 22%;
+  margin-bottom: 10px;
+  bottom: 18%;
+  position: absolute;
+}
+
+#email img{
+  height: 50px;
+  position: absolute;
+  bottom: 7%;
+}
+
+.email p{
+  font-size: 25px;
+  bottom: 12%;
+  position: absolute;
+}
+
+.maja_juhl p{
+  font-size: 25px;
+  bottom: 8%;
+  position: absolute;
+  left: 13%;
+  color: #707070;
+}
+
+
+#instagram img{
+  height: 47px;
+  position: absolute;
+  bottom: 7%;
+  left: 45%;
+}
+
+.instagram p{
+  font-size: 25px;
+  bottom: 12%;
+  position: absolute;
+  left: 45%;
+}
+
+.majajuhl p{
+  font-size: 25px;
+  bottom: 8%;
+  position: absolute;
+  left: 50%;
+  color: #707070;
+}
+
+#facebook img{
+  height: 47px;
+  position: absolute;
+  bottom: 7%;
+  left: 70%;
+}
+
+.facebook p{
+  font-size: 25px;
+  bottom: 12%;
+  position: absolute;
+  left: 70%;
+}
+
+.Maja p{
+  font-size: 25px;
+  bottom: 8%;
+  position: absolute;
+  left: 75%;
+  color: #707070;
+}
+
+/*Ny side starter her*/
+
+#animationpage {
+  height: 100vh;
+  background: var(--beige);
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+#animation h3{
+  font-size: 100px;
+  bottom: 8%;
+  position: absolute;
+  bottom: 35%;
+  left: 32%;
+}
+
+  #animation hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 40%;
+  margin-bottom: 10px;
+  bottom: 35%;
+  position: absolute;
+  left: 31%;
+  }
+
+  .video1 video{
+  height: 80vh;
+  position: absolute;
+  margin-left: 75px;
+  margin-top: -40px;
+  }
+
+  .textarea{
+    height: 70vh;
+    margin-top: 100px;
+    width: 30%;
+    margin-left: 885px;
+    background: var(--beige);
+    position: relative;
+    box-sizing: border-box;
+}
+
+  .textarea h4{
+    font-size: 40px;
+    position: absolute;
+    left: 5%;;
+    top: 10%;
+  }
+
+  .textarea hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 20%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .movingarttext p{
+    font-size: 20px;
+    position:absolute;
+    left: 5%;
+    top: 25%;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 5%;
+  }
+
+  .movingarttext hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 85%;
+    position: absolute;
+    left: 5%;
+  }
+
+  /*Ny sektion starter her*/
+
+  .textarea2{
+    height: 70vh;
+    margin-top: 200px;
+    width: 30%;
+    margin-left: 0;
+    background: var(--beige);
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .textarea2 h4{
+    font-size: 40px;
+    position: absolute;
+    left: 5%;;
+    top: 10%;
+  }
+
+  .textarea2 hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 20%;
+    position: absolute;
+    left: 5%;
+  }
+
+
+  .animationtext p{
+    font-size: 20px;
+    position:absolute;
+    left: 5%;
+    top: 25%;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 5%;
+  }
+
+  .animationtext hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 85%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .froe{
+    width: 500px;
+    height: 500px;
+    background-image: url(../cssanimation/froe2.png);
+    animation: moveX 1s steps(6) infinite;
+    float: right;
+    margin-right: 15%;
+    margin-top: -500px;
+    z-index: 10;
+    position: relative;
+  }
+
+  @keyframes moveX {
+    from{background-position-x:0px;}
+    to{background-position-x:-3000px;}
+  }
+
+  /*Ny sektion starter her*/
+
+  #adobepage {
+    height: 100vh;
+    background: var(--beige);
+    position: relative;
+    padding: 0 100px;
+    box-sizing: border-box;
+    margin-top: 100px;
+  }
+
+  #adobe-xd h3{
+    font-size: 100px;
+    bottom: 8%;
+    position: absolute;
+    bottom: 35%;
+    left: 33%;
+  }
+
+  #adobe-xd hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 38%;
+    margin-bottom: 10px;
+    bottom: 35%;
+    position: absolute;
+    left: 32%;
+  }
+
+
+  .textarea3{
+    height: 70vh;
+    margin-top: 150px;
+    width: 30%;
+    margin-left: 885px;
+    background: var(--beige);
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .textarea3 h4{
+    font-size: 40px;
+    position: absolute;
+    left: 5%;;
+    top: 10%;
+  }
+
+  .textarea3 hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 20%;
+    position: absolute;
+    left: 5%;
+  }
+
+/*Ny sektion starter her*/
+
+  .foodapptext p{
+    font-size: 19px;
+    position:absolute;
+    left: 5%;
+    top: 25%;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 5%;
+  }
+
+  .foodapptext hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 85%;
+    position: absolute;
+    left: 5%;
+  }
+
+  .appforside-image img{
+    height: 85vh;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: -44%;
+  }
+
+  .appside-image img{
+    height: 85vh;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -44%;
+  }
+
+  .ordre-image img{
+    height: 85vh;
+    position: absolute;
+    margin-left: 590px;
+    margin-top: -44%;
+  }
+
+  a.foodknap{
+    padding: 5px 20px;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    background: black;
+    font-size: 15px;
+    margin-top: 60px;
+    left: 32%;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+  }
+
+/*Ny sektion starter her*/
+
+  .textarea4{
+    height: 70vh;
+    margin-top: 300px;
+    width: 30%;
+    margin-left: 0;
+    background: var(--beige);
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .textarea4 h4{
+    font-size: 40px;
+    position: absolute;
+    left: 5%;;
+    top: 10%;
+  }
+
+  .textarea4 hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 20%;
+    position: absolute;
+    left: 5%;
+  }
+
+
+  .projekttext p{
+    font-size: 19px;
+    position:absolute;
+    left: 5%;
+    top: 30%;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 5%;
+  }
+
+  .projekttext hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 85%;
+    position: absolute;
+    left: 5%;
+  }
+
+
+  .hjemmeside-image img{
+    height: 80vh;
+    position: absolute;
+    margin-left: 470px;
+    margin-top: -42%;
+  }
+
+  a.hjemmesideknap{
+    padding: 5px 20px;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    background: black;
+    font-size: 15px;
+    margin-top: 50px;
+    left: 63%;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+  }
+
+
+
+/*Ny sektion starter her*/
+
+  .textarea5{
+    height: 70vh;
+    margin-top: 300px;
+    width: 30%;
+    margin-left: 885;
+    background: var(--beige);
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 100px;
+  }
+
+  .textarea5 h4{
+    font-size: 40px;
+    position: absolute;
+    left: 5%;;
+    top: 10%;
+  }
+
+  .textarea5 hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 20%;
+    position: absolute;
+    left: 5%;
+  }
+
+
+  .datingapptext p{
+    font-size: 19px;
+    position:absolute;
+    left: 5%;
+    top: 27%;
+    font-family: 'Cormorant Garamond', serif;
+    margin-right: 5%;
+  }
+
+  .datingapptext hr{
+    border:.5px solid var(--dark);
+    margin-top: 5px;
+    width: 90%;
+    margin-bottom: 10px;
+    top: 85%;
+    position: absolute;
+    left: 5%;
+  }
+
+.datingapp-image {
+  height: 50vh;
+  width: 300px;
+  position: relative;
+}
+
+
+.datingapp-image img{
+  height: 85vh;
+  position: absolute;
+  left: 100%;
+  bottom: 115%;
+}
+
+a.datingappknap{
+  padding: 5px 20px;
+  cursor: pointer;
+  position: absolute;
+  color: white;
+  background: black;
+  font-size: 15px;
+  bottom: -628%;
+  left: 32%;
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+}
+
+/*Ny side starter her*/
+
+#bymepage {
+  height: 100vh;
+  background: var(--beige);
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+#byme h3{
+  font-size: 100px;
+  bottom: 8%;
+  position: absolute;
+  bottom: 40%;
+  left: 37%;
+}
+
+#byme hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 30%;
+  margin-bottom: 10px;
+  bottom: 40%;
+  position: absolute;
+  left: 36%;
+}
+
+.textarea6{
+  height: 70vh;
+  margin-top: 200px;
+  width: 30%;
+  margin-left: 0;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea6 h4{
+  font-size: 40px;
+  position: absolute;
+  left: 5%;;
+  top: 10%;
+}
+
+.textarea6 hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 20%;
+  position: absolute;
+  left: 5%;
+}
+
+.bymetext p{
+  font-size: 28px;
+  position:absolute;
+  left: 5%;
+  top: 40%;
+  font-family: 'Cormorant Garamond', serif;
+  margin-right: 5%;
+}
+
+.bymetext hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 85%;
+  position: absolute;
+  left: 5%;
+}
+
+.mebillede1 img{
+  height: 90vh;
+  position: absolute;
+  left: 50%;
+  bottom: -880%;
+}
+
+.textarea7{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 505px;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea7 img{
+  height: 125vh;
+  position: absolute;
+  left: -50%;
+  margin-top: -60px;
+  z-index: 5;
+}
+
+.textarea8{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 0;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea8 img{
+  height: 120vh;
+  position: absolute;
+  left: 95%;
+  margin-top: -50%;
+}
+
+.textarea9 img{
+  height: 120vh;
+  position: absolute;
+  left: 10%;
+  margin-top: -25%;
+  z-index: 5;
+}
+
+.textarea10{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 505px;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea10 img{
+  height: 90vh;
+  position: absolute;
+  left: 28.5%;
+  margin-top: -10%;
+}
+
+.textarea11{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 0;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea11 img{
+  height: 100vh;
+  position: absolute;
+  left: 15%;
+  margin-top: -15%;
+}
+
+.textarea12 img{
+  height: 110vh;
+  position: absolute;
+  left: 60%;
+  margin-top: -40%;
+  z-index: 5;
+}
+
+.textarea13{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 505px;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea13 img{
+  height: 100vh;
+  position: absolute;
+  left: -50%;
+  margin-top: 5%;
+  z-index: 5;
+}
+
+.textarea14 img{
+  height: 90vh;
+  position: absolute;
+  left: 59%;
+  margin-top: -20%;
+  z-index: 5;
+}
+
+.textarea15{
+  height: 70vh;
+  margin-top: 200px;
+  width: 60%;
+  margin-left: 0;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 500px;
+}
+
+.textarea15 img{
+  height: 100vh;
+  position: absolute;
+  left: 17%;
+  margin-top: 20%;
+  z-index: 5;
+}
+
+/*Ny sektion starter her*/
+
+#illustratorpage {
+  height: 100vh;
+  background: var(--beige);
+  position: relative;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+#illustrator h3{
+  font-size: 100px;
+  bottom: 8%;
+  position: absolute;
+  bottom: 40%;
+  left: 32%;
+}
+
+#illustrator hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 41%;
+  margin-bottom: 10px;
+  bottom: 40%;
+  position: absolute;
+  left: 30%;
+}
+
+/*Ny sektion starter her*/
+
+.textarea16{
+  height: 70vh;
+  margin-top: 300px;
+  width: 30%;
+  margin-left: 885;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+}
+
+.textarea16 h4{
+  font-size: 40px;
+  position: absolute;
+  left: 5%;;
+  top: 10%;
+}
+
+.textarea16 hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 20%;
+  position: absolute;
+  left: 5%;
+}
+
+
+.portraittext p{
+  font-size: 19px;
+  position:absolute;
+  left: 5%;
+  top: 43%;
+  font-family: 'Cormorant Garamond', serif;
+  margin-right: 5%;
+}
+
+.portraittext hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 85%;
+  position: absolute;
+  left: 5%;
+}
+
+.portraitimage img{
+  height: 100vh;
+  margin-left: 13%;
+  margin-top: -55%;
+}
+
+/*Ny sektion starter her*/
+
+.textarea17{
+  height: 70vh;
+  margin-top: 200px;
+  width: 30%;
+  margin-left: 0;
+  background: var(--beige);
+  position: relative;
+  box-sizing: border-box;
+  margin-bottom: 70px;
+}
+
+.textarea17 h4{
+  font-size: 40px;
+  position: absolute;
+  left: 5%;;
+  top: 10%;
+}
+
+.textarea17 hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 20%;
+  position: absolute;
+  left: 5%;
+}
+
+.ansigttext p{
+  font-size: 28px;
+  position:absolute;
+  left: 5%;
+  top: 35%;
+  font-family: 'Cormorant Garamond', serif;
+  margin-right: 5%;
+}
+
+.ansigttext hr{
+  border:.5px solid var(--dark);
+  margin-top: 5px;
+  width: 90%;
+  margin-bottom: 10px;
+  top: 85%;
+  position: absolute;
+  left: 5%;
+}
+
+.ansigtimage img{
+  height: 90vh;
+  margin-left: 52%;
+  margin-top: -53%;
+}
+
+
+
+@media only screen and (max-width: 1100px){
+  #hero-text {
+    width: 30vw;
+    left: 80px;
+  }
+
+  #hero-text h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+
+  #hero-text h2 {
+    font-size: 30px;
+  }
+
+/*Portfolio sektion*/
+
+  #overskrift{
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+    z-index: 1;
+    top: 5%;
+  }
+
+  #overskrift h3 {
+    left: 50%;
+    transform: translatex(-50%);
+    top: 10%;
+  }
+
+  .portfolio-image1 {
+    width: 450px;
+  }
+
+  .portfolio-image2 {
+    width: 450px;
+  }
+
+  .portfolio-image3 {
+    width: 450px;
+    z-index: 1;
+  }
+
+  .portfolio-image4 {
+    width: 450px;
+  }
+
+  a.gallery1 {
+    left: 15%;
+  }
+
+  a.gallery2 {
+    right: 16%;
+  }
+
+  a.gallery3 {
+    left: 15%;
+    z-index: 1;
+  }
+
+  a.gallery4 {
+    right: 15%;
+  }
+
+  .sendknap2 {
+    left: 7%;
+  }
+
+  #contact h3 {
+    left: 32%;
+  }
+
+  /*Om mig side*/
+
+  #om-mig {
+    font-size: 60px;
+  }
+
+  .me-billede {
+    height: 450px;
+    top: 5%;
+    left: 3%;
+  }
+
+  .me-blomst {
+    height: 340px;
+  }
+
+  .pictures1 {
+    height: 400px;
+    bottom: 15%;
+  }
+
+  .pictures2 {
+    height: 400px;
+    bottom: 15%;
+  }
+
+  .pictures3 {
+    height: 400px;
+    bottom: 15%;
+  }
+
+  /*Portfolio side*/
+
+  /*Animation sektion*/
+  #animation hr {
+    width: 47%;
+    left: 30%;
+  }
+
+  #animation h3 {
+
+    left: 31%;
+  }
+
+  .video1 video {
+    height: 75vh;
+    margin-left: 50px;
+    margin-top: -20px;
+  }
+
+  .textarea {
+    margin-left: 759px;
+  }
+
+  /*Adobe XD sektion*/
+
+  #adobe-xd h3 {
+    left: 31%;
+  }
+
+  #adobe-xd hr {
+    width: 44%;
+    left: 30%;
+  }
+
+  .textarea3 {
+    margin-left: 759px;
+  }
+
+  .appforside-image img {
+    height: 60vh;
+    position: absolute;
+    margin-left: 45px;
+    margin-top: -42%;
+  }
+
+  .appside-image img {
+    height: 60vh;
+    position: absolute;
+    margin-left: 283px;
+    margin-top: -42%;
+  }
+
+  .ordre-image img {
+    height: 60vh;
+    position: absolute;
+    margin-left: 520px;
+    margin-top: -42%;
+  }
+
+
+  a.foodknap {
+    margin-top: -20px;
+  }
+
+  .hjemmeside-image img {
+    height: 60vh;
+  }
+
+  a.hjemmesideknap {
+    margin-top: -20px;
+    left: 64%;
+  }
+
+  .textarea5 {
+    margin-left: 759px;
+  }
+
+  a.datingappknap {
+    left: 36%;
+  }
+
+  /*Billeder sektion*/
+
+  #byme h3 {
+    left: 36%;
+  }
+
+  #byme hr {
+    width: 34%;
+  }
+
+  .mebillede1 img {
+    height: 80vh;
+  }
+
+  .textarea7 img {
+    height: 100vh;
+    left: -60%;
+  }
+
+  .textarea8 img {
+    height: 100vh;
+  }
+
+  .textarea9 img {
+    height: 100vh;
+    margin-top: -35%;
+  }
+
+  .textarea10 img {
+    height: 90vh;
+    left: 8%;
+    margin-top: -15%;
+  }
+
+  .textarea11 img {
+    height: 90vh;
+    left: 10%;
+    margin-top: -14%;
+  }
+
+  .textarea12 img {
+    height: 100vh;
+    left: 57%;
+    margin-top: -40%;
+  }
+
+  .textarea13 img {
+    height: 90vh;
+    left: -64%;
+    margin-top: 25%;
+  }
+
+
+  .textarea14 img {
+    height: 70vh;
+    margin-top: -2%;
+  }
+
+
+  .textarea15 img {
+    height: 80vh;
+    margin-top: 43%;
+  }
+
+  /*Illustrator sektion*/
+
+  #illustartor h3 {
+    left: 31%;
+  }
+
+  .textarea16 {
+    margin-left: 759;
+  }
+
+  .portraitimage img {
+    height: 90vh;
+    margin-left: 12%;
+    margin-top: -60%;
+  }
+
+  .ansigtimage img {
+    margin-top: -58%;
+  }
+
+  /*Kontakt side*/
+
+  #kontakt {
+    left: 37%;
+  }
+
+  .maja_juhl p {
+    left: 15%;
+  }
+
+}
+
+
+
+
+
+@media only screen and (max-width: 965px){
+    #hero-text {
+    width: 30vw;
+    left: 50px;
+  }
+
+  #hero-text h1 {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  #hero-text h2 {
+    font-size: 20px;
+  }
+
+  /*Om mig sektion*/
+
+  h4 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  /*portfolio sektion*/
+
+  .portfolio-image1 {
+    width: 360px;
+  }
+
+  .portfolio-image2 {
+    width: 360px;
+  }
+
+  .portfolio-image3 {
+    width: 360px;
+  }
+
+  .portfolio-image4 {
+    width: 360px;
+  }
+
+  /*Om mig side*/
+
+  .me-box {
+    top: 33%;
+    transform: translateY(-50%);
+    left: 42%;
+    width: 55%;
+    padding: 30px;
+    height: 30%;
+    box-sizing: border-box;
+    margin-right: 100px;
+  }
+
+  .text p {
+    font-size: 25px;
+  }
+
+  .pictures1 {
+    height: 350px;
+    bottom: 15%;
+  }
+
+  .pictures2 {
+    height: 350px;
+    bottom: 15%;
+  }
+
+  .pictures3 {
+    height: 350px;
+    bottom: 15%;
+  }
+
+  /*Portfolio side*/
+
+  /*Animation sektion*/
+
+  #animation h3 {
+    font-size: 80px;
+    left: 32%;
+  }
+
+  #animation hr {
+    width: 45%;
+    left: 30%;
+  }
+
+  .textarea {
+    height: 60vh;
+    margin-left: 675px;
+  }
+
+  .textarea h4 {
+    font-size: 30px;
+  }
+
+  .movingarttext p {
+    font-size: 17px;
+  }
+
+  .video1 video {
+    height: 60vh;
+    margin-left: 75px;
+    margin-top: 0px;
+  }
+
+  .textarea2 {
+    height: 60vh;
+  }
+
+  .textarea2 h4 {
+    font-size: 30px;
+  }
+
+  .animationtext p {
+    font-size: 17px;
+  }
+
+  .froe {
+    margin-right: 6%;
+  }
+
+  /*Adobe sektion*/
+
+  #adobe-xd h3 {
+    font-size: 80px;
+  }
+
+  #adobe-xd h3 {
+    left: 33%;
+  }
+
+  #adobe-xd hr {
+    width: 42%;
+    left: 31%;
+  }
+
+  .textarea3 {
+    height: 60vh;
+    margin-left: 675px;
+  }
+
+  .textarea3 h4 {
+    font-size: 30px;
+  }
+
+  .foodapptext p {
+    font-size: 16px;
+    top: 26%;
+  }
+
+  .appforside-image img {
+    margin-left: 30px;
+    margin-top: -44%;
+  }
+
+  .appside-image img {
+    margin-left: 250px;
+    margin-top: -44%;
+  }
+
+
+  .ordre-image img {
+    margin-left: 470px;
+    margin-top: -44%;
+  }
+
+  a.foodknap {
+    margin-top: 10px;
+  }
+
+  .hjemmeside-image img {
+    margin-left: 370px;
+    margin-top: -47%;
+  }
+
+  .textarea5 {
+    margin-left: 675px;
+  }
+
+  .textarea5 h4 {
+    font-size: 30px;
+  }
+
+  .datingapptext p {
+    font-size: 17px;
+  }
+
+  .datingapp-image img {
+    height: 75vh;
+    left: 74%;
+    bottom: 125%;
+  }
+
+  a.datingappknap {
+    bottom: -593%;
+    left: 32%;
+  }
+
+  /*Billede sektion*/
+
+  #byme h3 {
+    font-size: 80px;
+    left: 37%;
+  }
+
+  #byme hr {
+    width: 32%;
+    left: 36%;
+  }
+
+  .mebillede1 img {
+    height: 75vh;
+    bottom: -850%;
+  }
+
+  .textarea7 {
+    margin-left: 460px;
+
+  }
+  .textarea7 img {
+    height: 90vh;
+    left: -61%;
+  }
+
+  .textarea8 img {
+    height: 90vh;
+  }
+
+  .textarea10 img {
+    height: 80vh;
+    left: 2%;
+  }
+
+  .textarea11 img {
+    height: 90vh;
+    left: 6%;
+    margin-top: -17%;
+  }
+
+  .textarea12 img {
+    height: 90vh;
+  }
+
+  .textarea13 img {
+    height: 90vh;
+    left: -81%;
+  }
+
+  /*Illustrator sektion*/
+
+  #illustartor h3 {
+    font-size: 80px;
+    left: 32%;
+  }
+
+  .textarea16 {
+    margin-left: 665;
+  }
+
+  .textarea16 h4 {
+    font-size: 30px;
+  }
+
+  .portraitimage img {
+    height: 80vh;
+    margin-left: 11%;
+    margin-top: -66%;
+  }
+
+  .textarea17 h4 {
+    font-size: 35px;
+  }
+
+  .ansigtimage img {
+    height: 80vh;
+    margin-left: 52%;
+    margin-top: -63%;
+  }
+
+  /*Kontakt side*/
+
+  .contactform h3 {
+    font-size: 35px;
+  }
+
+  .findme h3 {
+    font-size: 35px;
+  }
+
+  .maja_juhl p {
+    font-size: 20px;
+    left: 17%;
+  }
+
+  .majajuhl p {
+    font-size: 20px;
+    left: 51%;
+  }
+
+  .Maja p {
+    font-size: 20px;
+    left: 76%;
+  }
+}
+
+
+@media only screen and (max-width: 768px){
+
+  .menu-links li {
+    font-size: 15px;
+  }
+
+  .menu-logo img {
+    max-height: 60%;
+  }
+
+  #hero-text h1 {
+    font-size: 55px;
+    line-height: 40px;
+    margin-top: 10px;
+  }
+  #hero-text h2 {
+    font-size: 25px;
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 50px;
+    bottom: 10%;
+    max-height: calc(80vh - 100px);
+  }
+
+  /*Om mig sektion*/
+
+  .about-image {
+    max-height: 70%;
+    margin-left: 60;
+  }
+
+  .about-text {
+    max-width: 45%;
+    max-height: 90%;
+  }
+
+  /*Portfolio sektion*/
+
+  .portfolio-image1 {
+    width: 300px;
+    z-index: 1;
+  }
+
+  .portfolio-image2 {
+    width: 300px;
+    z-index: 1;
+  }
+
+  .portfolio-image3 {
+    width: 300px;
+    z-index: 1;
+  }
+
+  .portfolio-image4 {
+    width: 300px;
+    z-index: 1;
+  }
+
+  a.gallery1 {
+    left: 13%;
+  }
+
+  a.gallery2 {
+    right: 14%;
+    z-index: 2;
+  }
+
+  a.gallery3 {
+    left: 13%;
+  }
+
+  a.gallery4 {
+    right: 14%;
+  }
+
+  /*Kontakt sektion*/
+
+  #contact h3 {
+    left: 25%;
+  }
+
+  .sendknap2 {
+    left: 9%;
+  }
+
+  a:-webkit-any-link {
+    margin-right: 15px;
+  }
+
+  /*Om mig side*/
+
+  #om-mig {
+    font-size: 50px;
+  }
+
+  .me-billede {
+    height: 350px;
+    top: 11%;
+  }
+
+  .text p {
+    font-size: 20px;
+  }
+
+  .me-blomst {
+    bottom: 600px;
+  }
+
+  .pictures1 {
+    height: 350px;
+    bottom: 25%;
+    left: 10%;
+  }
+
+  .pictures2 {
+    height: 350px;
+    bottom: 25%;
+    left: 55%;
+  }
+
+  .pictures3 {
+    height: 350px;
+    bottom: 20px;
+    left: 33%;
+  }
+
+  /*Portfolio side*/
+
+  /*Animation sektion*/
+
+  #animation h3 {
+    left: 26%;
+  }
+
+  #animation hr {
+    width: 55%;
+    left: 24%;
+  }
+
+  .textarea {
+    height: 60vh;
+    margin-left: 527px;
+  }
+
+  .movingarttext p {
+    font-size: 16px;
+  }
+
+  .video1 video {
+    height: 50vh;
+    margin-left: 44px;
+    margin-top: 35px;
+  }
+
+  .animationtext p {
+    font-size: 14px;
+    top: 28%;
+  }
+
+  .froe {
+    margin-right: 1%;
+  }
+
+  /*Adobe sektion*/
+
+  #adobe-xd h3 {
+    left: 27%;
+  }
+
+  #adobe-xd hr {
+    width: 51%;
+    left: 25%;
+  }
+
+  .textarea3 {
+    margin-left: 527px;
+  }
+
+  .foodapptext p {
+    font-size: 15px;
+  }
+
+  .ordre-image img {
+    height: 50vh;
+    margin-left: 353px;
+    margin-top: -50%;
+  }
+
+  .appside-image img {
+    height: 50vh;
+    margin-left: 182px;
+    margin-top: -50%;
+  }
+
+  .appforside-image img {
+    height: 50vh;
+    margin-left: 10px;
+    margin-top: -50%;
+  }
+
+  a.foodknap {
+    margin-top: -13px;
+  }
+
+  .textarea4 h4 {
+    font-size: 30px;
+  }
+
+  .projekttext p {
+    font-size: 17px;
+  }
+
+  .hjemmeside-image img {
+    height: 50vh;
+    margin-left: 274px;
+    margin-top: -54%;
+  }
+
+  a.hjemmesideknap {
+    margin-top: -40px;
+    left: 60%;
+  }
+
+  .textarea5 {
+    margin-left: 527px;
+  }
+
+  .datingapptext p {
+    font-size: 16px;
+  }
+
+  .datingapp-image img {
+    left: 49%;
+  }
+
+  a.datingappknap {
+    left: 30%;
+  }
+
+  /*Billeder sektion*/
+
+  #byme h3 {
+    left: 33%;
+  }
+
+  #byme hr {
+    width: 40%;
+    left: 32%;
+  }
+
+  .mebillede1 img {
+    height: 70vh;
+    bottom: -848%;
+    left: 44%;
+  }
+
+  .textarea7 {
+    margin-left: 300px;
+  }
+
+  .textarea7 img {
+    height: 80vh;
+    left: -56%;
+  }
+
+  .textarea8 img {
+    height: 80vh;
+    left: 90%;
+    margin-top: -59%;
+  }
+
+  .textarea9 img {
+    height: 80vh;
+    left: 7%;
+    margin-top: -33%;
+    z-index: 5;
+  }
+
+  .textarea10 img {
+    height: 60vh;
+    left: -22%;
+    margin-top: 14%;
+  }
+
+  .textarea11 img {
+    height: 70vh;
+    margin-top: -36%;
+  }
+
+  .textarea12 img {
+    height: 80vh;
+    left: 56%;
+    margin-top: -27%;
+  }
+
+  .textarea13 img {
+    height: 70vh;
+    left: -105%;
+    margin-top: 36%;
+  }
+
+  .textarea14 img {
+    height: 60vh;
+    margin-top: 5%;
+    left: 56%;
+  }
+
+  .textarea15 img {
+    height: 70vh;
+    margin-top: 83%;
+    left: 10%;
+  }
+
+  /*Illustrator sektion*/
+
+  #illustartor h3 {
+    left: 25%;
+  }
+
+  .textarea16 {
+    margin-left: 527px;
+    height: 60vh;
+  }
+
+  .portraittext p {
+    font-size: 19px;
+    top: 38%;
+  }
+
+  .portraitimage img {
+    height: 60vh;
+    margin-left: 12%;
+    margin-top: -69%;
+  }
+
+  .textarea17 {
+    height: 60vh;
+  }
+
+  .ansigttext p {
+    font-size: 22px;
+    top: 34%;
+  }
+
+  .ansigtimage img {
+    height: 70vh;
+    margin-left: 48%;
+    margin-top: -71%;
+  }
+
+  /*Kontakt siden*/
+
+  #kontakt {
+    left: 34%;
+    font-size: 60px;
+  }
+
+  .form2 {
+    transform: translate(-50%,-86%);
+    width: calc(104% - 100px);
+  }
+
+  .findme h3 {
+    font-size: 35px;
+    margin-left: -65px;
+  }
+
+  .findme hr {
+    margin-left: -65px;
+    width: 30%;
+  }
+
+  #email img {
+    margin-left: -65px;
+  }
+
+  .email p {
+    margin-left: -65px;
+  }
+
+  .maja_juhl p {
+    left: 12%;
+  }
+
+  .majajuhl p {
+    left: 52%;
+  }
+
+  #facebook img {
+    left: 68%;
+  }
+
+  .facebook p {
+    left: 68%;
+  }
+
+  .Maja p {
+    font-size: 18px;
+    left: 75%;
+  }
+}
+
+
+@media only screen and (max-width: 480px){
+  .menu-links li {
+    font-size: 6px;
+  }
+
+  .menu-logo img {
+    max-height: 40%;
+  }
+
+  #hero {
+    height: 50vh;
+
+  }
+
+  #hero-text{
+    left: 20px;
+  }
+
+
+  #hero-text hr {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  #hero-text h1 {
+    font-size: 20px;
+    line-height: 15px;
+  }
+
+  #hero-text h2 {
+    font-size: 20px;
+
+  }
+
+  .hero-image {
+    position: absolute;
+    right: 0;
+    top: 25%;
+    max-height: 60%;
+  }
+
+  .about-text {
+    max-width: 80%;
+    left: 20%;
+    position: relative;
+  }
+
+/*Om mig sektion*/
+
+  .about-image {
+    max-height: 30%;
+    margin-left: 115px;
+    top: 20%;
+  }
+
+  .about-flower {
+    height: 0;
+  }
+
+  h4 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  .about-text {
+    max-width: 70%;
+    max-height: 50%;
+    top: 65%;
+    left: 15%;
+  }
+
+  a.kontaktknap {
+    left: 37%;
+  }
+
+  /*Portfolio sektion*/
+
+  #overskrift h3 {
+    font-size: 40px;
+    left: 50%;
+  }
+
+  .cirkel1 {
+    height: 0;
+  }
+
+  .cirkel2 {
+    height: 0;
+  }
+
+  .portfolio-image1 {
+    width: 300px;
+    height: 250px;
+    left: 10%;
+    z-index: 1;
+    top: 130px;
+  }
+
+  a.gallery1 {
+    left: 23%;
+    top: 220px;
+  }
+
+  .portfolio-image2 {
+    width: 300px;
+    height: 250px;
+    left: 10%;
+    z-index: 1;
+    top: 405px;
+  }
+
+  a.gallery2 {
+    right: 20%;
+    top: 490px;
+    z-index: 2;
+  }
+
+  .portfolio-image3 {
+    width: 300px;
+    height: 250px;
+    left: 10%;
+    z-index: 1;
+    bottom: 285px;
+  }
+
+  a.gallery3 {
+    left: 23%;
+    bottom: 375px;
+  }
+
+  .portfolio-image4 {
+    width: 300px;
+    height: 250px;
+    left: 10%;
+    z-index: 1;
+    bottom: 10px;
+  }
+
+  a.gallery4 {
+    right: 20%;
+    bottom: 100px;
+
+  }
+
+  /*Kontakt sektion*/
+
+  #contact h3 {
+    left: 20%;
+    font-size: 40px;
+  }
+
+  #contact .half-col {
+    width: 140%;
+    height: 90%;
+    float: left;
+
+  }
+
+  .form1 {
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 55%;
+    left: 42%;
+    width: calc(110% - 150px);
+  }
+
+  form p {
+    font-size: 15px;
+  }
+
+  .half-col textarea {
+    float: left;
+    height: 100px;
+  }
+
+  .contact-message {
+    margin-left: 0px;
+  }
+
+  .sendknap2 {
+    left: 0;
+  }
+
+  /*footer*/
+
+  .some-links {
+    top: 40%;
+    transform: translateX(-200%);
+    float: left;
+  }
+
+  .footer-logo {
+    right: 40px;
+  }
+
+  /*Om mig side*/
+
+  #om-mig {
+    font-size: 40px;
+    position: absolute;
+    left: 26%;
+  }
+
+  .me-cirkel {
+    height: 400px;
+  }
+
+  .me-billede {
+    height: 250px;
+    top: 6%;
+    left: 22%;
+  }
+
+  .me-box {
+    top: 35%;
+    left: 8%;
+    width: 84%;
+    height: 16%;
+  }
+
+  .text p {
+    font-size: 15px;
+  }
+
+  .me-blomst {
+    height: 300px;
+    bottom: 790;
+  }
+
+  .pictures1 {
+    height: 300px;
+    bottom: 40%;
+    left: 19%;
+  }
+
+  .pictures2 {
+    height: 300px;
+    bottom: 23%;
+    left: 21%;
+  }
+
+  .pictures3 {
+    height: 350px;
+    bottom: 3%;
+    left: 16%;
+  }
+
+  /*Portfolio side*/
+
+  /*Animation sektion*/
+
+  #animation h3 {
+    font-size: 50px;
+    bottom: 8%;
+    position: absolute;
+    bottom: 41%;
+    left: 17%;
+  }
+
+  #animation hr {
+    width: 69%;
+    left: 15%;
+    bottom: 40%;
+  }
+
+  .video1 video {
+    height: 20vh;
+    margin-left: 29px;
+    margin-top: 72px;
+  }
+
+  .textarea h4 {
+    font-size: 20px;
+  }
+
+  .movingarttext p {
+    font-size: 10px;
+  }
+
+  .textarea {
+    margin-left: 262px;
+    height: 40vh;
+  }
+
+  .textarea2 h4 {
+    font-size: 20px;
+    top: 13%;
+  }
+
+  .animationtext p {
+    font-size: 11px;
+  }
+
+  .froe {
+    margin-right: -12%;
+    margin-top: -650px;
+  }
+
+  .textarea2 {
+    height: 30vh;
+    margin-top: 423px;
+    width: 80%;
+  }
+
+  /*Adobe sektion*/
+
+  #adobe-xd h3 {
+    font-size: 50px;
+    left: 19%;
+    bottom: 50%;
+  }
+
+  #adobe-xd hr {
+    width: 65%;
+    left: 16%;
+    bottom: 49%;
+  }
+
+  .textarea3 {
+    margin-left: 263px;
+    height: 40vh;
+  }
+
+  .textarea3 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .foodapptext p {
+    font-size: 9px;
+  }
+
+  .appforside-image img {
+    height: 30vh;
+    margin-top: -75%;
+  }
+
+  .appside-image img {
+    height: 30vh;
+    margin-left: 139px;
+    margin-top: -75%;
+  }
+
+  .ordre-image img {
+    height: 30vh;
+    margin-left: 353px;
+    margin-top: -50%;
+  }
+
+  .ordre-image img {
+    height: 30vh;
+    margin-left: 72px;
+    margin-top: -7%;
+  }
+
+  a.foodknap {
+    margin-top: 225px;
+    left: 23%;
+  }
+
+  .textarea4 {
+    height: 40vh;
+  }
+
+  .textarea4 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .projekttext p {
+    font-size: 10px;
+    top: 28%;
+  }
+
+  .hjemmeside-image img {
+    height: 20vh;
+    margin-left: 144px;
+    margin-top: -63%;
+  }
+
+  a.hjemmesideknap {
+    margin-top: -64px;
+    left: 55%;
+  }
+
+  .datingapp-image img {
+    left: 16%;
+    height: 45vh;
+    bottom: 47%;
+  }
+
+  .textarea5 {
+    margin-left: 262px;
+    height: 40vh;
+    margin-top: 200px;
+    margin-bottom: -200px;
+  }
+
+  .textarea5 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .datingapptext p {
+    font-size: 9px;
+    top: 28%;
+  }
+
+  a.datingappknap {
+    bottom: -454%;
+    left: 24%;
+  }
+
+
+  /*Billeder sektion*/
+
+  #byme h3 {
+    font-size: 50px;
+    left: 26%;
+    bottom: 47%;
+  }
+
+  #byme hr {
+    width: 52%;
+    left: 24%;
+    bottom: 46%;
+  }
+
+  .textarea6 {
+    height: 40vh;
+  }
+
+  .textarea6 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .bymetext p {
+    font-size: 17px;
+    top: 35%;
+  }
+
+  .mebillede1 img {
+    height: 40vh;
+    bottom: -637%;
+    left: 34%;
+  }
+
+  .textarea7 img {
+    height: 70vh;
+    left: -120%;
+    margin-top: -105px;
+  }
+
+  .textarea8 img {
+    height: 70vh;
+    left: 13%;
+    margin-top: -78%;
+  }
+
+  .textarea9 img {
+    height: 70vh;
+  }
+
+  .textarea11 img {
+    height: 55vh;
+    margin-top: -105%;
+    left: 8%;
+  }
+
+  .textarea12 img {
+    height: 70vh;
+    left: 8%;
+    margin-top: -89%;
+  }
+
+  .textarea13 img {
+    height: 50vh;
+    left: -208%;
+    margin-top: 75%;
+  }
+
+  .textarea14 img {
+    height: 50vh;
+    left: 9%;
+  }
+
+  .textarea15 img {
+    height: 55vh;
+    margin-top: 187%;
+    left: 8%;
+  }
+
+  /*Illustrator side*/
+
+  #illustartor h3 {
+    font-size: 50px;
+    left: 17%;
+    bottom: 48%;
+  }
+
+  .textarea16 {
+    margin-left: 263px;
+    height: 40vh;
+    margin-top: 200px;
+  }
+
+  .textarea16 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .portraittext p {
+    font-size: 15px;
+    top: 32%;
+  }
+
+  .portraitimage img {
+    height: 30vh;
+    margin-left: 9%;
+    margin-top: -101%;
+  }
+
+  .textarea17 {
+    height: 40vh;
+    margin-top: 100px;
+  }
+
+  .textarea17 h4 {
+    font-size: 20px;
+    top: 12%;
+  }
+
+  .ansigttext p {
+    font-size: 15px;
+    top: 31%;
+  }
+
+  .ansigtimage img {
+    height: 40vh;
+    margin-left: 38%;
+    margin-top: -106%;
+  }
+
+  /*Kontakt side*/
+
+  #kontakt {
+    left: 27%;
+    font-size: 40px;
+  }
+
+  .form2 {
+    transform: translate(-43%,-128%);
+    width: calc(126% - 72px);
+  }
+
+  .contactform h3 {
+    font-size: 30px;
+  }
+
+  .findme h3 {
+    font-size: 30px;
+    margin-left: -85px;
+    bottom: 35%;
+  }
+
+  .findme hr {
+    margin-left: -85px;
+    width: 50%;
+    bottom: 33%;
+  }
+
+  .email p {
+    margin-left: -85px;
+    bottom: 29%;
+  }
+
+  #email img {
+    margin-left: -85px;
+    bottom: 25%;
+  }
+
+  .maja_juhl p {
+    left: 19%;
+    bottom: 26%;
+  }
+
+  .instagram p {
+    bottom: 21%;
+    left: 4%;
+  }
+
+  #instagram img {
+    bottom: 16%;
+    left: 4%;
+  }
+
+  .majajuhl p {
+    left: 19%;
+    bottom: 17%;
+  }
+
+
+  #facebook img {
+    left: 4%;
+    bottom: 6%;
+  }
+
+  .facebook p {
+    bottom: 11%;
+    left: 4%;
+  }
+
+  .Maja p {
+    font-size: 20px;
+    left: 19%;
+    bottom: 7%;
+  }
+}
